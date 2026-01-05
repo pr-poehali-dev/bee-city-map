@@ -202,7 +202,7 @@ export const cities: City[] = [
     name: 'Ростов-на-Дону',
     region: 'Ростовская область',
     population: '1.1 млн',
-    image: 'https://images.unsplash.com/photo-1595666944516-bbb485958fb5',
+    image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/e6d06f62-1957-465c-96f2-0e52c03c09af.jpg',
     temp: -2,
     timezone: 3,
     lat: 47.2357,
@@ -448,9 +448,9 @@ export const cities: City[] = [
     lat: 54.3143,
     lng: 48.4033,
     attractions: [
-      { name: 'Ленинский мемориал', description: 'Музейный комплекс', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' },
-      { name: 'Императорский мост', description: 'Мост через Волгу', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
-      { name: 'Парк Победы', description: 'Мемориальный комплекс', image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5' }
+      { name: 'Ленинский мемориал', description: 'Музейный комплекс', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/ddd22dcd-a19a-44c5-899f-4dd536c48b9f.jpg' },
+      { name: 'Императорский мост', description: 'Мост через Волгу', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/56c2e774-8d43-469c-b08b-ab14cb967b31.jpg' },
+      { name: 'Парк Победы', description: 'Мемориальный комплекс', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/4de6d6a8-3426-4d66-8de5-acf6a5f9cd8a.jpg' }
     ],
     news: [
       { title: 'Ульяновск развивает авиастроение', date: '3 января 2026', source: 'UlPravda', description: 'Авиастар - ульяновский авиационный комплекс получил заказ на производство 50 самолетов Ил-76 для грузоперевозок и специальных задач. Это обеспечит загрузку производства на ближайшие 5 лет и сохранит более 8000 рабочих мест. Ульяновск остается важнейшим центром авиастроения в России.' },
@@ -488,9 +488,9 @@ export const cities: City[] = [
     lat: 57.6261,
     lng: 39.8845,
     attractions: [
-      { name: 'Спасо-Преображенский монастырь', description: 'Исторический памятник XII века', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' },
-      { name: 'Стрелка', description: 'Место слияния Волги и Которосли', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
-      { name: 'Набережная Волги', description: 'Главная набережная', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' }
+      { name: 'Спасо-Преображенский монастырь', description: 'Исторический памятник XII века', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/60aeba4f-80dd-4e1b-8323-29abd319dcd8.jpg' },
+      { name: 'Стрелка', description: 'Место слияния Волги и Которосли', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/52c62a72-3344-49dc-9a28-e51a2a5f0302.jpg' },
+      { name: 'Церковь Ильи Пророка', description: 'Храм XVII века', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/516ed1b9-c25c-4e47-9d72-29a4fbecdb31.jpg' }
     ],
     news: [
       { title: 'Ярославль отмечает 1015-летие', date: '3 января 2026', source: 'YarNews', description: 'Город готовится к масштабному празднованию своего 1015-летия, основанный князем Ярославом Мудрым в 1010 году. Планируются исторические реконструкции, культурные фестивали и открытие обновленных музеев. Юбилей подчеркнет важную роль Ярославля в истории России и привлечет туристов, интересующихся древнерусским наследием.' },
@@ -508,9 +508,9 @@ export const cities: City[] = [
     lat: 52.2869,
     lng: 104.3050,
     attractions: [
-      { name: 'Озеро Байкал', description: 'Самое глубокое озеро в мире', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4' },
-      { name: '130 квартал', description: 'Историческая зона', image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44' },
-      { name: 'Богоявленский собор', description: 'Старейший храм города', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' }
+      { name: 'Озеро Байкал', description: 'Самое глубокое озеро в мире', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/63ebc218-9633-44d4-8a25-d278f33676fc.jpg' },
+      { name: '130 квартал', description: 'Историческая зона', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/980c9d93-97b1-4016-bd45-9f4112abf83d.jpg' },
+      { name: 'Богоявленский собор', description: 'Старейший храм города', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/65a4859e-5355-4c3e-9ffb-8c8bed8d1ede.jpg' }
     ],
     news: [
       { title: 'Иркутск развивает туризм на Байкале', date: '3 января 2026', source: 'Irk.ru', description: 'Иркутская область запускает новую туристическую программу "Ворота на Байкал", включающую 20 новых маршрутов к озеру Байкал. Планируется создание новых туристических баз, экологических троп и смотровых площадок. Иркутск как ворота на Байкал рассчитывает принять более 1,5 миллиона туристов в 2026 году.' },
@@ -528,9 +528,9 @@ export const cities: City[] = [
     lat: 48.4827,
     lng: 135.0838,
     attractions: [
-      { name: 'Набережная Амура', description: 'Главная набережная', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
-      { name: 'Утес', description: 'Смотровая площадка', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' },
-      { name: 'Спасо-Преображенский собор', description: 'Главный храм края', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' }
+      { name: 'Набережная Амура', description: 'Главная набережная', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/94c6cb2f-b3f5-4728-87bb-f2758d55a8ae.jpg' },
+      { name: 'Утес', description: 'Смотровая площадка', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/84a1338b-89c2-4969-85b7-94a4ff7f070d.jpg' },
+      { name: 'Спасо-Преображенский собор', description: 'Главный храм края', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/762fb98f-1636-4890-8d36-ab7e059afb0b.jpg' }
     ],
     news: [
       { title: 'Хабаровск модернизирует инфраструктуру', date: '3 января 2026', source: 'Хабаровский Экспресс', description: 'Город запустил масштабную программу модернизации городской инфраструктуры, включающую обновление набережной Амура, реконструкцию кентральных улиц и создание новых общественных пространств. Планируется улучшение транспортной доступности и благоустройство парковых зон. Это повысит качество жизни жителей и укрепит статус Хабаровска как крупнейшего города Дальнего Востока.' },
@@ -548,9 +548,9 @@ export const cities: City[] = [
     lat: 43.0368,
     lng: 44.6681,
     attractions: [
-      { name: 'Проспект Мира', description: 'Главная улица города', image: 'https://images.unsplash.com/photo-1555113307-e6f8e8ad2b4b' },
-      { name: 'Кармадонское ущелье', description: 'Природная достопримечательность', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4' },
-      { name: 'Осетинская башня', description: 'Историческая башня', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' }
+      { name: 'Проспект Мира', description: 'Главная улица города', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/8da12fec-2935-469c-8aeb-cb3fff8a8b25.jpg' },
+      { name: 'Кармадонское ущелье', description: 'Природная достопримечательность', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/80505ce1-c1e5-4963-9b50-55c0af37ce04.jpg' },
+      { name: 'Осетинская башня', description: 'Историческая башня', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/c2d4fdd4-5034-4e0e-ae6e-edfdf86e8840.jpg' }
     ],
     news: [
       { title: 'Владикавказ развивает горный туризм', date: '3 января 2026', source: 'Осетия-Ирыстон', description: 'Республика Северная Осетия-Алания запускает новую программу развития горного туризма с центром во Владикавказе. Планируется создание новых туристических маршрутов по горной Чечне, развитие турбаз и горнолыжных курортов. Регион рассчитывает принять более 300 тысяч туристов, интересующихся кавказской природой и культурой.' },
@@ -568,9 +568,9 @@ export const cities: City[] = [
     lat: 42.9849,
     lng: 47.5047,
     attractions: [
-      { name: 'Джума-мечеть', description: 'Центральная мечеть', image: 'https://images.unsplash.com/photo-1584291527905-6b4f0b1b02fc' },
-      { name: 'Набережная', description: 'Набережная Каспийского моря', image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0' },
-      { name: 'Бархан Сарыкум', description: 'Крупнейший бархан Евразии', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4' }
+      { name: 'Джума-мечеть', description: 'Центральная мечеть', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/7e267258-9b16-4d88-a5c8-30a93c059f5b.jpg' },
+      { name: 'Набережная', description: 'Набережная Каспийского моря', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/0298917b-41d4-4cb9-9f6f-8645a155a98c.jpg' },
+      { name: 'Бархан Сарыкум', description: 'Крупнейший бархан Евразии', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/e993956f-66d4-4a83-8299-27f7caf6a5df.jpg' }
     ],
     news: [
       { title: 'Махачкала модернизирует набережную', date: '3 января 2026', source: 'РИА Дагестан' },
@@ -588,9 +588,9 @@ export const cities: City[] = [
     lat: 56.4977,
     lng: 84.9744,
     attractions: [
-      { name: 'Деревянная архитектура', description: 'Уникальные резные дома', image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44' },
-      { name: 'ТГУ', description: 'Старейший университет Сибири', image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f' },
-      { name: 'Воскресенская гора', description: 'Исторический центр', image: 'https://images.unsplash.com/photo-1555113307-e6f8e8ad2b4b' }
+      { name: 'Деревянная архитектура', description: 'Уникальные резные дома', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/57f133fe-6b7e-45b3-a38d-9905518e4bc3.jpg' },
+      { name: 'ТГУ', description: 'Старейший университет Сибири', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/5358620f-1391-4f65-82b7-987a5df147ce.jpg' },
+      { name: 'Воскресенская гора', description: 'Исторический центр', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/339474b0-271e-4960-a6ab-f59edd95f3ae.jpg' }
     ],
     news: [
       { title: 'Томск - столица деревянного зодчества', date: '3 января 2026', source: 'Томский обзор' },
