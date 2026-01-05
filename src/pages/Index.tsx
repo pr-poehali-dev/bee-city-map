@@ -304,6 +304,348 @@ const cities: City[] = [
       { title: 'Волгоград готовится к 80-летию победы в Сталинградской битве', date: '4 января 2026', source: 'V1.ru' },
       { title: 'Набережная получит новую инфраструктуру', date: '2 января 2026', source: 'Волга-медиа' }
     ]
+  },
+  {
+    id: 'krasnodar',
+    name: 'Краснодар',
+    region: 'Краснодарский край',
+    population: '1.0 млн',
+    image: 'https://images.unsplash.com/photo-1595666944516-bbb485958fb5',
+    temp: 3,
+    timezone: 3,
+    color: 'from-green-500 to-emerald-600',
+    attractions: [
+      { name: 'Парк Галицкого', description: 'Современный парк у стадиона', image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5' },
+      { name: 'Улица Красная', description: 'Главная улица города', image: 'https://images.unsplash.com/photo-1595666944516-bbb485958fb5' },
+      { name: 'Сафари-парк', description: 'Зоопарк и сафари-парк', image: 'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7' }
+    ],
+    news: [
+      { title: 'Краснодар лидирует по темпам строительства', date: '3 января 2026', source: 'Юга.ру' },
+      { title: 'Новый парк откроют весной', date: '1 января 2026', source: 'Кубань 24' }
+    ]
+  },
+  {
+    id: 'saratov',
+    name: 'Саратов',
+    region: 'Саратовская область',
+    population: '830 тыс',
+    image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f',
+    temp: -8,
+    timezone: 4,
+    color: 'from-violet-500 to-purple-600',
+    attractions: [
+      { name: 'Набережная Космонавтов', description: 'Главная набережная Волги', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
+      { name: 'Проспект Кирова', description: 'Центральная улица города', image: 'https://images.unsplash.com/photo-1555113307-e6f8e8ad2b4b' },
+      { name: 'Парк Победы', description: 'Мемориальный комплекс', image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5' }
+    ],
+    news: [
+      { title: 'Саратов модернизирует общественный транспорт', date: '3 января 2026', source: 'СарБК' },
+      { title: 'Реконструкция театра оперы завершена', date: '1 января 2026', source: 'Саратов 24' }
+    ]
+  },
+  {
+    id: 'tyumen',
+    name: 'Тюмень',
+    region: 'Тюменская область',
+    population: '820 тыс',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
+    temp: -17,
+    timezone: 5,
+    color: 'from-sky-600 to-cyan-600',
+    attractions: [
+      { name: 'Набережная', description: 'Четырехуровневая набережная Туры', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
+      { name: 'Мост Влюбленных', description: 'Символ города', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
+      { name: 'Цветной бульвар', description: 'Пешеходная улица', image: 'https://images.unsplash.com/photo-1555113307-e6f8e8ad2b4b' }
+    ],
+    news: [
+      { title: 'Тюмень признана самым благоустроенным городом', date: '3 января 2026', source: 'Тюменская правда' },
+      { title: 'Новый IT-кластер откроется летом', date: '1 января 2026', source: 'Вслух.ру' }
+    ]
+  },
+  {
+    id: 'tolyatti',
+    name: 'Тольятти',
+    region: 'Самарская область',
+    population: '690 тыс',
+    image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f',
+    temp: -12,
+    timezone: 4,
+    color: 'from-blue-600 to-indigo-600',
+    attractions: [
+      { name: 'Технический музей АВТОВАЗа', description: 'История автомобилестроения', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' },
+      { name: 'Жигулевская ГЭС', description: 'Крупнейшая ГЭС на Волге', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
+      { name: 'Парк Победы', description: 'Мемориальный комплекс', image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5' }
+    ],
+    news: [
+      { title: 'АвтоВАЗ представил новую модель', date: '3 января 2026', source: 'TLT.ru' },
+      { title: 'Модернизация дорог продолжается', date: '1 января 2026', source: 'Площадь Свободы' }
+    ]
+  },
+  {
+    id: 'izhevsk',
+    name: 'Ижевск',
+    region: 'Удмуртия',
+    population: '650 тыс',
+    image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44',
+    temp: -14,
+    timezone: 4,
+    color: 'from-orange-600 to-red-600',
+    attractions: [
+      { name: 'Музей Калашникова', description: 'История легендарного оружия', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' },
+      { name: 'Набережная', description: 'Главная набережная города', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
+      { name: 'Зоопарк', description: 'Крупный зоопарк Урала', image: 'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7' }
+    ],
+    news: [
+      { title: 'Ижевск празднует 260-летие', date: '3 января 2026', source: 'IZHLIFE' },
+      { title: 'Новый культурный центр открылся', date: '1 января 2026', source: 'Удмуртия' }
+    ]
+  },
+  {
+    id: 'barnaul',
+    name: 'Барнаул',
+    region: 'Алтайский край',
+    population: '630 тыс',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
+    temp: -19,
+    timezone: 7,
+    color: 'from-emerald-600 to-teal-600',
+    attractions: [
+      { name: 'Демидовская площадь', description: 'Исторический центр', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
+      { name: 'Набережная Оби', description: 'Главная набережная', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
+      { name: 'Алтайский заповедник', description: 'Природный заповедник', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4' }
+    ],
+    news: [
+      { title: 'Барнаул готовится к летнему сезону', date: '3 января 2026', source: 'Толк' },
+      { title: 'Реконструкция центра завершена', date: '1 января 2026', source: 'Амител' }
+    ]
+  },
+  {
+    id: 'ulyanovsk',
+    name: 'Ульяновск',
+    region: 'Ульяновская область',
+    population: '620 тыс',
+    image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f',
+    temp: -11,
+    timezone: 4,
+    color: 'from-red-600 to-rose-600',
+    attractions: [
+      { name: 'Ленинский мемориал', description: 'Музейный комплекс', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' },
+      { name: 'Императорский мост', description: 'Мост через Волгу', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
+      { name: 'Парк Победы', description: 'Мемориальный комплекс', image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5' }
+    ],
+    news: [
+      { title: 'Ульяновск развивает авиастроение', date: '3 января 2026', source: 'UlPravda' },
+      { title: 'Новый парк откроется весной', date: '1 января 2026', source: 'Мозаика' }
+    ]
+  },
+  {
+    id: 'vladivostok',
+    name: 'Владивосток',
+    region: 'Приморский край',
+    population: '600 тыс',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
+    temp: -8,
+    timezone: 10,
+    color: 'from-cyan-600 to-blue-600',
+    attractions: [
+      { name: 'Золотой мост', description: 'Вантовый мост через бухту Золотой Рог', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
+      { name: 'Остров Русский', description: 'Кампус ДВФУ', image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0' },
+      { name: 'Токаревский маяк', description: 'Старейший маяк', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' }
+    ],
+    news: [
+      { title: 'Владивосток принимает международный форум', date: '3 января 2026', source: 'VL.ru' },
+      { title: 'Новый терминал порта открылся', date: '1 января 2026', source: 'Приморская газета' }
+    ]
+  },
+  {
+    id: 'yaroslavl',
+    name: 'Ярославль',
+    region: 'Ярославская область',
+    population: '600 тыс',
+    image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b',
+    temp: -10,
+    timezone: 3,
+    color: 'from-amber-600 to-orange-600',
+    attractions: [
+      { name: 'Спасо-Преображенский монастырь', description: 'Исторический памятник XII века', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' },
+      { name: 'Стрелка', description: 'Место слияния Волги и Которосли', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
+      { name: 'Набережная Волги', description: 'Главная набережная', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' }
+    ],
+    news: [
+      { title: 'Ярославль отмечает 1015-летие', date: '3 января 2026', source: 'YarNews' },
+      { title: 'Реставрация исторического центра продолжается', date: '1 января 2026', source: 'Комсомольская правда' }
+    ]
+  },
+  {
+    id: 'irkutsk',
+    name: 'Иркутск',
+    region: 'Иркутская область',
+    population: '590 тыс',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
+    temp: -21,
+    timezone: 8,
+    color: 'from-purple-600 to-violet-600',
+    attractions: [
+      { name: 'Озеро Байкал', description: 'Самое глубокое озеро в мире', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4' },
+      { name: '130 квартал', description: 'Историческая зона', image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44' },
+      { name: 'Богоявленский собор', description: 'Старейший храм города', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' }
+    ],
+    news: [
+      { title: 'Иркутск развивает туризм на Байкале', date: '3 января 2026', source: 'Irk.ru' },
+      { title: 'Новый музей откроется летом', date: '1 января 2026', source: 'АС Байкал' }
+    ]
+  },
+  {
+    id: 'khabarovsk',
+    name: 'Хабаровск',
+    region: 'Хабаровский край',
+    population: '580 тыс',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
+    temp: -22,
+    timezone: 10,
+    color: 'from-teal-600 to-cyan-600',
+    attractions: [
+      { name: 'Набережная Амура', description: 'Главная набережная', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
+      { name: 'Утес', description: 'Смотровая площадка', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' },
+      { name: 'Спасо-Преображенский собор', description: 'Главный храм края', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' }
+    ],
+    news: [
+      { title: 'Хабаровск модернизирует инфраструктуру', date: '3 января 2026', source: 'Хабаровский Экспресс' },
+      { title: 'Новый парк откроется весной', date: '1 января 2026', source: 'RIA27' }
+    ]
+  },
+  {
+    id: 'vladikavkaz',
+    name: 'Владикавказ',
+    region: 'Северная Осетия',
+    population: '300 тыс',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+    temp: -2,
+    timezone: 3,
+    color: 'from-green-600 to-teal-600',
+    attractions: [
+      { name: 'Проспект Мира', description: 'Главная улица города', image: 'https://images.unsplash.com/photo-1555113307-e6f8e8ad2b4b' },
+      { name: 'Кармадонское ущелье', description: 'Природная достопримечательность', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4' },
+      { name: 'Осетинская башня', description: 'Историческая башня', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' }
+    ],
+    news: [
+      { title: 'Владикавказ развивает горный туризм', date: '3 января 2026', source: 'Осетия-Ирыстон' },
+      { title: 'Реконструкция центра завершена', date: '1 января 2026', source: 'Северная Осетия' }
+    ]
+  },
+  {
+    id: 'makhachkala',
+    name: 'Махачкала',
+    region: 'Дагестан',
+    population: '600 тыс',
+    image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0',
+    temp: 5,
+    timezone: 3,
+    color: 'from-blue-600 to-purple-600',
+    attractions: [
+      { name: 'Джума-мечеть', description: 'Центральная мечеть', image: 'https://images.unsplash.com/photo-1584291527905-6b4f0b1b02fc' },
+      { name: 'Набережная', description: 'Набережная Каспийского моря', image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0' },
+      { name: 'Бархан Сарыкум', description: 'Крупнейший бархан Евразии', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4' }
+    ],
+    news: [
+      { title: 'Махачкала модернизирует набережную', date: '3 января 2026', source: 'РИА Дагестан' },
+      { title: 'Новый парк откроется летом', date: '1 января 2026', source: 'Черновик' }
+    ]
+  },
+  {
+    id: 'tomsk',
+    name: 'Томск',
+    region: 'Томская область',
+    population: '570 тыс',
+    image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44',
+    temp: -20,
+    timezone: 7,
+    color: 'from-yellow-600 to-amber-600',
+    attractions: [
+      { name: 'Деревянная архитектура', description: 'Уникальные резные дома', image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44' },
+      { name: 'ТГУ', description: 'Старейший университет Сибири', image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f' },
+      { name: 'Воскресенская гора', description: 'Исторический центр', image: 'https://images.unsplash.com/photo-1555113307-e6f8e8ad2b4b' }
+    ],
+    news: [
+      { title: 'Томск - столица деревянного зодчества', date: '3 января 2026', source: 'Томский обзор' },
+      { title: 'Университет открыл новый корпус', date: '1 января 2026', source: 'ТВ2' }
+    ]
+  },
+  {
+    id: 'orenburg',
+    name: 'Оренбург',
+    region: 'Оренбургская область',
+    population: '570 тыс',
+    image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f',
+    temp: -16,
+    timezone: 5,
+    color: 'from-rose-600 to-pink-600',
+    attractions: [
+      { name: 'Караван-Сарай', description: 'Памятник архитектуры', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' },
+      { name: 'Пешеходный мост', description: 'Граница Европы и Азии', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
+      { name: 'Национальная деревня', description: 'Этнографический комплекс', image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44' }
+    ],
+    news: [
+      { title: 'Оренбург отмечает 280 лет', date: '3 января 2026', source: 'ОренбургMedia' },
+      { title: 'Реконструкция центра завершена', date: '1 января 2026', source: 'Оренбург 56' }
+    ]
+  },
+  {
+    id: 'novokuznetsk',
+    name: 'Новокузнецк',
+    region: 'Кемеровская область',
+    population: '550 тыс',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
+    temp: -18,
+    timezone: 7,
+    color: 'from-indigo-600 to-blue-600',
+    attractions: [
+      { name: 'Кузнецкая крепость', description: 'Историческая крепость XVIII века', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' },
+      { name: 'Спасо-Преображенский собор', description: 'Главный храм города', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' },
+      { name: 'Бульвар Героев', description: 'Главная улица', image: 'https://images.unsplash.com/photo-1555113307-e6f8e8ad2b4b' }
+    ],
+    news: [
+      { title: 'Новокузнецк модернизирует металлургию', date: '3 января 2026', source: 'НИА Кузбасс' },
+      { title: 'Реставрация крепости завершена', date: '1 января 2026', source: 'Новокузнецк Online' }
+    ]
+  },
+  {
+    id: 'ryazan',
+    name: 'Рязань',
+    region: 'Рязанская область',
+    population: '540 тыс',
+    image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b',
+    temp: -9,
+    timezone: 3,
+    color: 'from-pink-600 to-fuchsia-600',
+    attractions: [
+      { name: 'Рязанский Кремль', description: 'Историко-архитектурный музей', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' },
+      { name: 'Набережная Оки', description: 'Главная набережная', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
+      { name: 'Музей ВДВ', description: 'Музей воздушно-десантных войск', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' }
+    ],
+    news: [
+      { title: 'Рязань празднует День ВДВ', date: '3 января 2026', source: 'Рязанские ведомости' },
+      { title: 'Реконструкция Кремля продолжается', date: '1 января 2026', source: '7info' }
+    ]
+  },
+  {
+    id: 'kaliningrad',
+    name: 'Калининград',
+    region: 'Калининградская область',
+    population: '500 тыс',
+    image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44',
+    temp: 0,
+    timezone: 2,
+    color: 'from-cyan-600 to-teal-600',
+    attractions: [
+      { name: 'Кафедральный собор', description: 'Символ города и могила Канта', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' },
+      { name: 'Музей Мирового океана', description: 'Крупнейший морской музей', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' },
+      { name: 'Куршская коса', description: 'Объект ЮНЕСКО', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4' }
+    ],
+    news: [
+      { title: 'Калининград развивает туризм', date: '3 января 2026', source: 'Клопс' },
+      { title: 'Новый терминал аэропорта открылся', date: '1 января 2026', source: 'Страна Калининград' }
+    ]
   }
 ];
 
@@ -443,7 +785,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <h1 className="text-2xl md:text-3xl font-heading font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-fade-in">
-              Города-миллионники России
+              Города России
             </h1>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-3 text-sm">
@@ -496,49 +838,39 @@ const Index = () => {
           )}
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-12">
+        <div className="honeycomb-grid">
           {filteredCities.map((city, index) => (
             <button
               key={city.id}
               onClick={() => navigate(`/city/${city.id}`)}
-              className="group relative aspect-square animate-scale-in hover:z-10"
-              style={{ animationDelay: `${index * 0.05}s` }}
+              className="honeycomb-cell group animate-scale-in"
+              style={{ animationDelay: `${index * 0.03}s` }}
             >
-              <div
-                className="absolute inset-0 rounded-3xl bg-gradient-to-br transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 opacity-80 group-hover:opacity-100"
-                style={{
-                  backgroundImage: `linear-gradient(135deg, ${city.color.split(' ').join(', ')})`,
-                  filter: 'blur(20px)',
-                }}
-              />
-              <Card className="relative h-full w-full p-4 flex flex-col justify-between overflow-hidden bg-card/40 backdrop-blur-xl border-2 border-transparent group-hover:border-primary/50 transition-all duration-300 group-hover:shadow-2xl">
-                <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity">
-                  <img
-                    src={city.image}
-                    alt={city.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="relative z-10 space-y-2">
-                  <h3 className="font-heading font-bold text-lg leading-tight">{city.name}</h3>
-                  <p className="text-xs text-muted-foreground line-clamp-1">{city.region}</p>
-                </div>
-                <div className="relative z-10 space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="flex items-center gap-1">
-                      <Icon name="Thermometer" size={16} className="text-accent" />
-                      <span className="font-mono font-semibold">{city.temp}°C</span>
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Icon name="Clock" size={16} className="text-secondary" />
-                      <span className="font-mono font-semibold">{getCityTime(city.timezone)}</span>
-                    </span>
+              <div className="honeycomb-inner">
+                <div className="honeycomb-image" style={{ backgroundImage: `url(${city.image})` }} />
+                <div className={`honeycomb-gradient bg-gradient-to-br ${city.color}`} />
+                <div className="honeycomb-content">
+                  <div className="space-y-1">
+                    <h3 className="font-heading font-bold text-base leading-tight">{city.name}</h3>
+                    <p className="text-xs text-muted-foreground/90 line-clamp-1">{city.region}</p>
                   </div>
-                  <Badge variant="secondary" className="w-full justify-center text-xs py-1">
-                    {city.population}
-                  </Badge>
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="flex items-center gap-1">
+                        <Icon name="Thermometer" size={14} className="text-accent" />
+                        <span className="font-mono font-semibold">{city.temp}°C</span>
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Icon name="Clock" size={14} className="text-secondary" />
+                        <span className="font-mono font-semibold">{getCityTime(city.timezone)}</span>
+                      </span>
+                    </div>
+                    <Badge variant="secondary" className="w-full justify-center text-xs py-0.5">
+                      {city.population}
+                    </Badge>
+                  </div>
                 </div>
-              </Card>
+              </div>
             </button>
           ))}
         </div>
