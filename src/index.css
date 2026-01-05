@@ -110,106 +110,107 @@
   }
 }
 
-.honeycomb-grid {
+.city-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
   padding: 20px 0;
 }
 
 @media (min-width: 768px) {
-  .honeycomb-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px;
+  .city-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
   }
 }
 
 @media (min-width: 1024px) {
-  .honeycomb-grid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+  .city-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 28px;
   }
 }
 
-.honeycomb-cell {
+.city-card {
   position: relative;
-  aspect-ratio: 1;
+  aspect-ratio: 4/3;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 12px;
   background: transparent;
-  border: none;
+  border: 4px solid #fbbf24;
   padding: 0;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(251, 191, 36, 0.2);
 }
 
-.honeycomb-cell:hover {
-  transform: scale(1.05) rotate(2deg);
-  z-index: 10;
+.city-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(251, 191, 36, 0.4);
+  border-color: #f59e0b;
 }
 
-.honeycomb-inner {
+.city-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  clip-path: polygon(
-    30% 0%,
-    70% 0%,
-    100% 30%,
-    100% 70%,
-    70% 100%,
-    30% 100%,
-    0% 70%,
-    0% 30%
-  );
   overflow: hidden;
   background: hsl(var(--card));
-  border: 2px solid hsl(var(--border));
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.honeycomb-cell:hover .honeycomb-inner {
-  border-color: hsl(var(--primary));
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.3),
-    0 0 40px hsl(var(--primary) / 0.4);
-}
-
-.honeycomb-image {
+.city-image {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.3;
   transition: all 0.5s ease;
 }
 
-.honeycomb-cell:hover .honeycomb-image {
-  opacity: 0.5;
-  transform: scale(1.15);
+.city-card:hover .city-image {
+  transform: scale(1.1);
 }
 
-.honeycomb-gradient {
+.city-overlay {
   position: absolute;
   inset: 0;
-  opacity: 0.6;
-  mix-blend-mode: overlay;
-  transition: opacity 0.4s ease;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  transition: opacity 0.3s ease;
 }
 
-.honeycomb-cell:hover .honeycomb-gradient {
-  opacity: 0.85;
-}
-
-.honeycomb-content {
+.city-content {
   position: relative;
   z-index: 10;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 16px;
-  color: hsl(var(--foreground));
-  text-align: center;
-  backdrop-filter: blur(2px);
+  padding: 20px;
+  color: white;
+}
+
+.city-map-pin {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 20;
+  background: #fbbf24;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.city-map-pin:hover {
+  background: #f59e0b;
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(251, 191, 36, 0.6);
 }

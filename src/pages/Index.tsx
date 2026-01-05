@@ -14,7 +14,8 @@ interface City {
   image: string;
   temp: number;
   timezone: number;
-  color: string;
+  lat: number;
+  lng: number;
   attractions: Array<{ name: string; description: string; image: string }>;
   news: Array<{ title: string; date: string; source: string }>;
 }
@@ -25,14 +26,15 @@ const cities: City[] = [
     name: 'Москва',
     region: 'Москва',
     population: '13.1 млн',
-    image: 'https://images.unsplash.com/photo-1513326738677-b964603b136d',
+    image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/4b81ba79-4671-4aa3-a83e-a94ad0eef3aa.jpg',
     temp: -5,
     timezone: 3,
-    color: 'from-purple-500 to-pink-600',
+    lat: 55.7558,
+    lng: 37.6173,
     attractions: [
-      { name: 'Красная площадь', description: 'Главная площадь страны с Кремлем и Храмом Василия Блаженного', image: 'https://images.unsplash.com/photo-1513326738677-b964603b136d' },
-      { name: 'ВДНХ', description: 'Выставка достижений народного хозяйства', image: 'https://images.unsplash.com/photo-1520106212299-d99c443e4568' },
-      { name: 'Третьяковская галерея', description: 'Крупнейший музей русского искусства', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' }
+      { name: 'Красная площадь', description: 'Главная площадь страны с Кремлем и Храмом Василия Блаженного', image: 'https://images.unsplash.com/photo-1513326738677-b964603b136d?w=800&q=80' },
+      { name: 'ВДНХ', description: 'Выставка достижений народного хозяйства', image: 'https://images.unsplash.com/photo-1520106212299-d99c443e4568?w=800&q=80' },
+      { name: 'Третьяковская галерея', description: 'Крупнейший музей русского искусства', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37?w=800&q=80' }
     ],
     news: [
       { title: 'Открытие нового участка метро в Москве', date: '2 января 2026', source: 'РИА Новости' },
@@ -44,10 +46,11 @@ const cities: City[] = [
     name: 'Санкт-Петербург',
     region: 'Ленинградская область',
     population: '5.6 млн',
-    image: 'https://images.unsplash.com/photo-1556610961-2fecc5927173',
+    image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/07fb67c9-07a5-4781-9271-d26f0f15e911.jpg',
     temp: -8,
     timezone: 3,
-    color: 'from-blue-500 to-cyan-600',
+    lat: 59.9311,
+    lng: 30.3609,
     attractions: [
       { name: 'Эрмитаж', description: 'Один из крупнейших художественных музеев мира', image: 'https://images.unsplash.com/photo-1556610961-2fecc5927173' },
       { name: 'Петергоф', description: 'Дворцово-парковый ансамбль с фонтанами', image: 'https://images.unsplash.com/photo-1583422409516-2895a77efded' },
@@ -63,10 +66,11 @@ const cities: City[] = [
     name: 'Новосибирск',
     region: 'Новосибирская область',
     population: '1.6 млн',
-    image: 'https://images.unsplash.com/photo-1590509687778-6b0e3928c9cf',
+    image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/2e140830-900b-4a8b-a7bc-ee5d5b455763.jpg',
     temp: -18,
     timezone: 7,
-    color: 'from-emerald-500 to-teal-600',
+    lat: 55.0084,
+    lng: 82.9357,
     attractions: [
       { name: 'Театр оперы и балета', description: 'Крупнейший в России театр оперы и балета', image: 'https://images.unsplash.com/photo-1588392382834-a891154bca4d' },
       { name: 'Академгородок', description: 'Научный центр Сибирского отделения РАН', image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f' },
@@ -85,7 +89,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1600618528240-fb9fc964b853',
     temp: -12,
     timezone: 5,
-    color: 'from-orange-500 to-red-600',
+    lat: 56.8389,
+    lng: 60.6057,
     attractions: [
       { name: 'Храм-на-Крови', description: 'Место гибели царской семьи', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' },
       { name: 'Плотинка', description: 'Исторический центр города', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
@@ -104,7 +109,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07',
     temp: -10,
     timezone: 3,
-    color: 'from-rose-500 to-fuchsia-600',
+    lat: 55.7887,
+    lng: 49.1221,
     attractions: [
       { name: 'Казанский Кремль', description: 'Объект всемирного наследия ЮНЕСКО', image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07' },
       { name: 'Мечеть Кул-Шариф', description: 'Главная мечеть Татарстана', image: 'https://images.unsplash.com/photo-1584291527905-6b4f0b1b02fc' },
@@ -123,7 +129,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1580674285054-bed31e145f59',
     temp: -9,
     timezone: 3,
-    color: 'from-indigo-500 to-violet-600',
+    lat: 56.2965,
+    lng: 43.9361,
     attractions: [
       { name: 'Нижегородский Кремль', description: 'Крепость XVI века с 13 башнями', image: 'https://images.unsplash.com/photo-1580674285054-bed31e145f59' },
       { name: 'Чкаловская лестница', description: '560 ступеней от набережной до памятника Чкалову', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
@@ -142,7 +149,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44',
     temp: -15,
     timezone: 5,
-    color: 'from-amber-500 to-yellow-600',
+    lat: 55.1644,
+    lng: 61.4368,
     attractions: [
       { name: 'Кировка', description: 'Пешеходная улица с современными скульптурами', image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44' },
       { name: 'Аркаим', description: 'Древнее городище бронзового века', image: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f' },
@@ -161,7 +169,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f',
     temp: -11,
     timezone: 4,
-    color: 'from-sky-500 to-blue-600',
+    lat: 53.2001,
+    lng: 50.1500,
     attractions: [
       { name: 'Набережная Волги', description: 'Самая длинная набережная в России (5 км)', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
       { name: 'Ракета-носитель «Союз»', description: 'Памятник космической эре', image: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9' },
@@ -180,7 +189,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1605282003441-a966bb348137',
     temp: -20,
     timezone: 6,
-    color: 'from-lime-500 to-green-600',
+    lat: 54.9885,
+    lng: 73.3242,
     attractions: [
       { name: 'Успенский собор', description: 'Кафедральный собор в историческом центре', image: 'https://images.unsplash.com/photo-1605282003441-a966bb348137' },
       { name: 'Любинский проспект', description: 'Главная пешеходная улица города', image: 'https://images.unsplash.com/photo-1555113307-e6f8e8ad2b4b' },
@@ -199,7 +209,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1595666944516-bbb485958fb5',
     temp: -2,
     timezone: 3,
-    color: 'from-red-500 to-pink-600',
+    lat: 47.2357,
+    lng: 39.7015,
     attractions: [
       { name: 'Большая Садовая', description: 'Главная улица города с историческими зданиями', image: 'https://images.unsplash.com/photo-1595666944516-bbb485958fb5' },
       { name: 'Левбердон', description: 'Левый берег Дона с пляжами и парками', image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0' },
@@ -218,7 +229,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1593462265996-24a083e2df56',
     temp: -13,
     timezone: 5,
-    color: 'from-teal-500 to-emerald-600',
+    lat: 54.7388,
+    lng: 55.9721,
     attractions: [
       { name: 'Монумент Дружбы', description: 'Символ единства народов', image: 'https://images.unsplash.com/photo-1593462265996-24a083e2df56' },
       { name: 'Мечеть Ляля-Тюльпан', description: 'Одна из красивейших мечетей России', image: 'https://images.unsplash.com/photo-1584291527905-6b4f0b1b02fc' },
@@ -237,7 +249,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
     temp: -16,
     timezone: 7,
-    color: 'from-purple-600 to-indigo-600',
+    lat: 56.0153,
+    lng: 92.8932,
     attractions: [
       { name: 'Красноярские Столбы', description: 'Уникальные скальные образования', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' },
       { name: 'Часовня Параскевы Пятницы', description: 'Символ города на 10-рублевой купюре', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' },
@@ -256,7 +269,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1584291527905-6b4f0b1b02fc',
     temp: -7,
     timezone: 3,
-    color: 'from-cyan-500 to-blue-600',
+    lat: 51.6720,
+    lng: 39.1843,
     attractions: [
       { name: 'Корабль-музей "Гото Предестинация"', description: 'Копия первого линейного корабля русского флота', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' },
       { name: 'Адмиралтейская площадь', description: 'Центральная площадь с ростовой колонной', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
@@ -275,7 +289,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1595666944516-bbb485958fb5',
     temp: -14,
     timezone: 5,
-    color: 'from-pink-500 to-rose-600',
+    lat: 58.0105,
+    lng: 56.2502,
     attractions: [
       { name: 'Пермская галерея', description: 'Музей с коллекцией пермской деревянной скульптуры', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' },
       { name: 'Объект "Счастье не за горами"', description: 'Знаменитая надпись на набережной Камы', image: 'https://images.unsplash.com/photo-1555113307-e6f8e8ad2b4b' },
@@ -294,7 +309,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f',
     temp: -6,
     timezone: 3,
-    color: 'from-yellow-500 to-orange-600',
+    lat: 48.7080,
+    lng: 44.5133,
     attractions: [
       { name: 'Мамаев курган', description: 'Главный монумент-ансамбль "Героям Сталинградской битвы"', image: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f' },
       { name: 'Родина-мать', description: 'Один из самых высоких памятников мира (85 м)', image: 'https://images.unsplash.com/photo-1593462265996-24a083e2df56' },
@@ -313,7 +329,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1595666944516-bbb485958fb5',
     temp: 3,
     timezone: 3,
-    color: 'from-green-500 to-emerald-600',
+    lat: 45.0355,
+    lng: 38.9753,
     attractions: [
       { name: 'Парк Галицкого', description: 'Современный парк у стадиона', image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5' },
       { name: 'Улица Красная', description: 'Главная улица города', image: 'https://images.unsplash.com/photo-1595666944516-bbb485958fb5' },
@@ -332,7 +349,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f',
     temp: -8,
     timezone: 4,
-    color: 'from-violet-500 to-purple-600',
+    lat: 51.5336,
+    lng: 46.0342,
     attractions: [
       { name: 'Набережная Космонавтов', description: 'Главная набережная Волги', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
       { name: 'Проспект Кирова', description: 'Центральная улица города', image: 'https://images.unsplash.com/photo-1555113307-e6f8e8ad2b4b' },
@@ -351,7 +369,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
     temp: -17,
     timezone: 5,
-    color: 'from-sky-600 to-cyan-600',
+    lat: 57.1522,
+    lng: 65.5272,
     attractions: [
       { name: 'Набережная', description: 'Четырехуровневая набережная Туры', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
       { name: 'Мост Влюбленных', description: 'Символ города', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
@@ -370,7 +389,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f',
     temp: -12,
     timezone: 4,
-    color: 'from-blue-600 to-indigo-600',
+    lat: 53.5303,
+    lng: 49.3461,
     attractions: [
       { name: 'Технический музей АВТОВАЗа', description: 'История автомобилестроения', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' },
       { name: 'Жигулевская ГЭС', description: 'Крупнейшая ГЭС на Волге', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
@@ -389,7 +409,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44',
     temp: -14,
     timezone: 4,
-    color: 'from-orange-600 to-red-600',
+    lat: 56.8519,
+    lng: 53.2048,
     attractions: [
       { name: 'Музей Калашникова', description: 'История легендарного оружия', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' },
       { name: 'Набережная', description: 'Главная набережная города', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
@@ -408,7 +429,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
     temp: -19,
     timezone: 7,
-    color: 'from-emerald-600 to-teal-600',
+    lat: 53.3547,
+    lng: 83.7697,
     attractions: [
       { name: 'Демидовская площадь', description: 'Исторический центр', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
       { name: 'Набережная Оби', description: 'Главная набережная', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
@@ -427,7 +449,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f',
     temp: -11,
     timezone: 4,
-    color: 'from-red-600 to-rose-600',
+    lat: 54.3143,
+    lng: 48.4033,
     attractions: [
       { name: 'Ленинский мемориал', description: 'Музейный комплекс', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' },
       { name: 'Императорский мост', description: 'Мост через Волгу', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
@@ -446,7 +469,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
     temp: -8,
     timezone: 10,
-    color: 'from-cyan-600 to-blue-600',
+    lat: 43.1332,
+    lng: 131.9113,
     attractions: [
       { name: 'Золотой мост', description: 'Вантовый мост через бухту Золотой Рог', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
       { name: 'Остров Русский', description: 'Кампус ДВФУ', image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0' },
@@ -465,7 +489,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b',
     temp: -10,
     timezone: 3,
-    color: 'from-amber-600 to-orange-600',
+    lat: 57.6261,
+    lng: 39.8845,
     attractions: [
       { name: 'Спасо-Преображенский монастырь', description: 'Исторический памятник XII века', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' },
       { name: 'Стрелка', description: 'Место слияния Волги и Которосли', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
@@ -484,7 +509,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
     temp: -21,
     timezone: 8,
-    color: 'from-purple-600 to-violet-600',
+    lat: 52.2869,
+    lng: 104.3050,
     attractions: [
       { name: 'Озеро Байкал', description: 'Самое глубокое озеро в мире', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4' },
       { name: '130 квартал', description: 'Историческая зона', image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44' },
@@ -503,7 +529,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
     temp: -22,
     timezone: 10,
-    color: 'from-teal-600 to-cyan-600',
+    lat: 48.4827,
+    lng: 135.0838,
     attractions: [
       { name: 'Набережная Амура', description: 'Главная набережная', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
       { name: 'Утес', description: 'Смотровая площадка', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' },
@@ -522,7 +549,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
     temp: -2,
     timezone: 3,
-    color: 'from-green-600 to-teal-600',
+    lat: 43.0368,
+    lng: 44.6681,
     attractions: [
       { name: 'Проспект Мира', description: 'Главная улица города', image: 'https://images.unsplash.com/photo-1555113307-e6f8e8ad2b4b' },
       { name: 'Кармадонское ущелье', description: 'Природная достопримечательность', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4' },
@@ -541,7 +569,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0',
     temp: 5,
     timezone: 3,
-    color: 'from-blue-600 to-purple-600',
+    lat: 42.9849,
+    lng: 47.5047,
     attractions: [
       { name: 'Джума-мечеть', description: 'Центральная мечеть', image: 'https://images.unsplash.com/photo-1584291527905-6b4f0b1b02fc' },
       { name: 'Набережная', description: 'Набережная Каспийского моря', image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0' },
@@ -560,7 +589,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44',
     temp: -20,
     timezone: 7,
-    color: 'from-yellow-600 to-amber-600',
+    lat: 56.4977,
+    lng: 84.9744,
     attractions: [
       { name: 'Деревянная архитектура', description: 'Уникальные резные дома', image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44' },
       { name: 'ТГУ', description: 'Старейший университет Сибири', image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f' },
@@ -579,7 +609,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f',
     temp: -16,
     timezone: 5,
-    color: 'from-rose-600 to-pink-600',
+    lat: 51.7727,
+    lng: 55.0988,
     attractions: [
       { name: 'Караван-Сарай', description: 'Памятник архитектуры', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' },
       { name: 'Пешеходный мост', description: 'Граница Европы и Азии', image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19' },
@@ -598,7 +629,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
     temp: -18,
     timezone: 7,
-    color: 'from-indigo-600 to-blue-600',
+    lat: 53.7557,
+    lng: 87.1099,
     attractions: [
       { name: 'Кузнецкая крепость', description: 'Историческая крепость XVIII века', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96' },
       { name: 'Спасо-Преображенский собор', description: 'Главный храм города', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' },
@@ -617,7 +649,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b',
     temp: -9,
     timezone: 3,
-    color: 'from-pink-600 to-fuchsia-600',
+    lat: 54.6269,
+    lng: 39.6916,
     attractions: [
       { name: 'Рязанский Кремль', description: 'Историко-архитектурный музей', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' },
       { name: 'Набережная Оки', description: 'Главная набережная', image: 'https://images.unsplash.com/photo-1605091373219-654678ed9f0f' },
@@ -636,7 +669,8 @@ const cities: City[] = [
     image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44',
     temp: 0,
     timezone: 2,
-    color: 'from-cyan-600 to-teal-600',
+    lat: 54.7104,
+    lng: 20.4522,
     attractions: [
       { name: 'Кафедральный собор', description: 'Символ города и могила Канта', image: 'https://images.unsplash.com/photo-1605640840605-14ac1855827b' },
       { name: 'Музей Мирового океана', description: 'Крупнейший морской музей', image: 'https://images.unsplash.com/photo-1566127444032-7efa940c8e37' },
@@ -684,7 +718,7 @@ const Index = () => {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: 'Города-миллионники России',
+        title: 'Города России',
         text: 'Интерактивная карта городов России',
         url: window.location.href
       });
@@ -692,6 +726,12 @@ const Index = () => {
       navigator.clipboard.writeText(window.location.href);
       alert('Ссылка скопирована в буфер обмена!');
     }
+  };
+
+  const openGoogleMaps = (lat: number, lng: number, cityName: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    const url = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}&query_place_id=${encodeURIComponent(cityName)}`;
+    window.open(url, '_blank');
   };
 
   if (selectedCity) {
@@ -712,7 +752,14 @@ const Index = () => {
               <h1 className="text-5xl font-heading font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 {selectedCity.name}
               </h1>
-              <p className="text-xl text-muted-foreground">{selectedCity.region} • {selectedCity.population}</p>
+              <p className="text-xl text-muted-foreground mb-4">{selectedCity.region} • {selectedCity.population}</p>
+              <Button
+                onClick={(e) => openGoogleMaps(selectedCity.lat, selectedCity.lng, selectedCity.name, e)}
+                className="gap-2 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold"
+              >
+                <Icon name="MapPin" size={20} />
+                Открыть на карте Google Maps
+              </Button>
             </div>
 
             <div className="space-y-6 animate-scale-in">
@@ -724,7 +771,7 @@ const Index = () => {
                 {selectedCity.attractions.map((attr, idx) => (
                   <Card
                     key={idx}
-                    className="overflow-hidden group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card/50 backdrop-blur"
+                    className="overflow-hidden group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card/50 backdrop-blur border-2 border-yellow-500/50 hover:border-yellow-500"
                   >
                     <div className="relative h-48 overflow-hidden">
                       <img
@@ -750,10 +797,10 @@ const Index = () => {
               </h2>
               <div className="space-y-4">
                 {selectedCity.news.map((item, idx) => (
-                  <Card key={idx} className="p-6 hover:shadow-lg transition-all bg-card/50 backdrop-blur hover:bg-card/70">
+                  <Card key={idx} className="p-6 hover:shadow-lg transition-all bg-card/50 backdrop-blur hover:bg-card/70 border-2 border-yellow-500/30 hover:border-yellow-500/60">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-full bg-primary/10">
-                        <Icon name="Newspaper" size={24} className="text-primary" />
+                      <div className="p-3 rounded-full bg-yellow-500/20">
+                        <Icon name="Newspaper" size={24} className="text-yellow-500" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
@@ -784,7 +831,7 @@ const Index = () => {
       <header className="border-b border-border/50 bg-card/30 backdrop-blur-xl sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <h1 className="text-2xl md:text-3xl font-heading font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-fade-in">
+            <h1 className="text-2xl md:text-3xl font-heading font-bold bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-600 bg-clip-text text-transparent animate-fade-in">
               Города России
             </h1>
             <div className="flex items-center gap-4">
@@ -793,12 +840,12 @@ const Index = () => {
                   <span className="text-xs">💵 USD</span>
                   <span className="font-mono font-semibold">{usdRate.toFixed(2)} ₽</span>
                 </Badge>
-                <Badge variant="outline" className="gap-2 py-1.5 px-3">
+                <Badge variant="outline" className="gap-2 py-1.5 px-3 border-yellow-500/50">
                   <span className="text-xs">💶 EUR</span>
                   <span className="font-mono font-semibold">{eurRate.toFixed(2)} ₽</span>
                 </Badge>
               </div>
-              <Button onClick={handleShare} variant="outline" size="icon" className="hover:bg-primary/20">
+              <Button onClick={handleShare} variant="outline" size="icon" className="hover:bg-yellow-500/20 border-yellow-500/50">
                 <Icon name="Share2" size={18} />
               </Button>
             </div>
@@ -815,11 +862,11 @@ const Index = () => {
               placeholder="Поиск города..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="pl-12 h-14 text-lg bg-card/50 backdrop-blur border-2 focus:border-primary transition-all"
+              className="pl-12 h-14 text-lg bg-card/50 backdrop-blur border-2 border-yellow-500/50 focus:border-yellow-500 transition-all"
             />
           </div>
           {search && filteredCities.length > 0 && (
-            <Card className="mt-2 p-2 bg-card/95 backdrop-blur absolute z-10 w-full max-w-xl animate-fade-in">
+            <Card className="mt-2 p-2 bg-card/95 backdrop-blur absolute z-10 w-full max-w-xl animate-fade-in border-2 border-yellow-500/50">
               {filteredCities.slice(0, 5).map((city) => (
                 <button
                   key={city.id}
@@ -827,9 +874,9 @@ const Index = () => {
                     navigate(`/city/${city.id}`);
                     setSearch('');
                   }}
-                  className="w-full text-left px-4 py-3 rounded-lg hover:bg-primary/10 transition-colors flex items-center gap-3"
+                  className="w-full text-left px-4 py-3 rounded-lg hover:bg-yellow-500/10 transition-colors flex items-center gap-3"
                 >
-                  <Icon name="MapPin" size={18} className="text-primary" />
+                  <Icon name="MapPin" size={18} className="text-yellow-500" />
                   <span className="font-medium">{city.name}</span>
                   <span className="text-sm text-muted-foreground ml-auto">{city.region}</span>
                 </button>
@@ -838,34 +885,41 @@ const Index = () => {
           )}
         </div>
 
-        <div className="honeycomb-grid">
+        <div className="city-grid">
           {filteredCities.map((city, index) => (
             <button
               key={city.id}
               onClick={() => navigate(`/city/${city.id}`)}
-              className="honeycomb-cell group animate-scale-in"
+              className="city-card animate-scale-in"
               style={{ animationDelay: `${index * 0.03}s` }}
             >
-              <div className="honeycomb-inner">
-                <div className="honeycomb-image" style={{ backgroundImage: `url(${city.image})` }} />
-                <div className={`honeycomb-gradient bg-gradient-to-br ${city.color}`} />
-                <div className="honeycomb-content">
+              <div className="city-card-inner">
+                <div className="city-image" style={{ backgroundImage: `url(${city.image})` }} />
+                <div className="city-overlay" />
+                <button
+                  className="city-map-pin"
+                  onClick={(e) => openGoogleMaps(city.lat, city.lng, city.name, e)}
+                  aria-label={`Открыть ${city.name} на карте`}
+                >
+                  <Icon name="MapPin" size={24} className="text-black" />
+                </button>
+                <div className="city-content">
                   <div className="space-y-1">
-                    <h3 className="font-heading font-bold text-base leading-tight">{city.name}</h3>
-                    <p className="text-xs text-muted-foreground/90 line-clamp-1">{city.region}</p>
+                    <h3 className="font-heading font-bold text-2xl leading-tight">{city.name}</h3>
+                    <p className="text-sm text-white/80">{city.region}</p>
                   </div>
                   <div className="space-y-1.5">
-                    <div className="flex items-center justify-between text-xs">
+                    <div className="flex items-center justify-between text-sm">
                       <span className="flex items-center gap-1">
-                        <Icon name="Thermometer" size={14} className="text-accent" />
+                        <Icon name="Thermometer" size={18} className="text-yellow-400" />
                         <span className="font-mono font-semibold">{city.temp}°C</span>
                       </span>
                       <span className="flex items-center gap-1">
-                        <Icon name="Clock" size={14} className="text-secondary" />
+                        <Icon name="Clock" size={18} className="text-yellow-400" />
                         <span className="font-mono font-semibold">{getCityTime(city.timezone)}</span>
                       </span>
                     </div>
-                    <Badge variant="secondary" className="w-full justify-center text-xs py-0.5">
+                    <Badge className="w-full justify-center bg-yellow-500 text-black hover:bg-yellow-600 font-semibold">
                       {city.population}
                     </Badge>
                   </div>
@@ -879,9 +933,9 @@ const Index = () => {
       <footer className="border-t border-border/50 bg-card/30 backdrop-blur-xl mt-12 py-6">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 text-lg">
-            <Icon name="Users" size={20} className="text-primary animate-pulse-glow" />
+            <Icon name="Users" size={20} className="text-yellow-500" />
             <span className="text-muted-foreground">Посетителей:</span>
-            <span className="font-mono font-bold text-primary text-xl">{visitors.toLocaleString()}</span>
+            <span className="font-mono font-bold text-yellow-500 text-xl">{visitors.toLocaleString()}</span>
           </div>
         </div>
       </footer>
