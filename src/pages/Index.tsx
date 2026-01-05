@@ -31,7 +31,8 @@ const Index = () => {
   }, []);
 
   const filteredCities = cities.filter(city =>
-    city.name.toLowerCase().includes(search.toLowerCase())
+    city.name.toLowerCase().includes(search.toLowerCase()) ||
+    city.name_en.toLowerCase().includes(search.toLowerCase())
   );
 
   const selectedCity = cityId ? cities.find(c => c.id === cityId) : null;
@@ -128,8 +129,8 @@ const Index = () => {
                   className="w-full text-left px-4 py-3 rounded-lg hover:bg-yellow-500/10 transition-colors flex items-center gap-3"
                 >
                   <Icon name="MapPin" size={18} className="text-yellow-500" />
-                  <span className="font-medium">{city.name}</span>
-                  <span className="text-sm text-muted-foreground ml-auto">{city.region}</span>
+                  <span className="font-medium">{language === 'en' ? city.name_en : city.name}</span>
+                  <span className="text-sm text-muted-foreground ml-auto">{language === 'en' ? city.region_en : city.region}</span>
                 </button>
               ))}
             </Card>

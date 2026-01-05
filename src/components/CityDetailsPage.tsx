@@ -12,7 +12,7 @@ interface CityDetailsPageProps {
 
 export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
   const navigate = useNavigate();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted to-background">
@@ -29,9 +29,9 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
         <div className="space-y-8">
           <div className="text-center animate-fade-in">
             <h1 className="text-5xl font-heading font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              {city.name}
+              {language === 'en' ? city.name_en : city.name}
             </h1>
-            <p className="text-xl text-muted-foreground mb-4">{city.region} • {city.population}</p>
+            <p className="text-xl text-muted-foreground mb-4">{language === 'en' ? city.region_en : city.region} • {city.population}</p>
             <Button
               onClick={(e) => onOpenMap(city.lat, city.lng, city.name, e)}
               className="gap-2 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold"
@@ -61,8 +61,8 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   </div>
                   <div className="p-5">
-                    <h3 className="text-xl font-heading font-bold mb-2">{attr.name}</h3>
-                    <p className="text-muted-foreground text-sm">{attr.description}</p>
+                    <h3 className="text-xl font-heading font-bold mb-2">{language === 'en' ? attr.name_en : attr.name}</h3>
+                    <p className="text-muted-foreground text-sm">{language === 'en' ? attr.description_en : attr.description}</p>
                   </div>
                 </Card>
               ))}
@@ -82,8 +82,8 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
                       <Icon name="Newspaper" size={24} className="text-yellow-500" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground mb-3 leading-relaxed">{item.description}</p>
+                      <h3 className="text-lg font-semibold mb-2">{language === 'en' ? item.title_en : item.title}</h3>
+                      <p className="text-muted-foreground mb-3 leading-relaxed">{language === 'en' ? item.description_en : item.description}</p>
                       <div className="flex items-center gap-4 text-sm text-muted-foreground">
                         <span className="flex items-center gap-1">
                           <Icon name="Calendar" size={16} />
