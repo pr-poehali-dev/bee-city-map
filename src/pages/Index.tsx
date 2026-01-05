@@ -8,9 +8,11 @@ import { Card } from '@/components/ui/card';
 import { cities } from '@/data/cities';
 import { CityCard } from '@/components/CityCard';
 import { CityDetailsPage } from '@/components/CityDetailsPage';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Index = () => {
   const { cityId } = useParams();
+  const { language, setLanguage, t } = useLanguage();
   const [search, setSearch] = useState('');
   const [visitors, setVisitors] = useState(12847);
   const [usdRate, setUsdRate] = useState(95.43);
@@ -63,9 +65,27 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <h1 className="text-2xl md:text-3xl font-heading font-bold bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-600 bg-clip-text text-transparent animate-fade-in">
-              Отдых в России города миллионники
+              {t('title')}
             </h1>
             <div className="flex items-center gap-4">
+              <div className="flex gap-2">
+                <Button
+                  onClick={() => setLanguage('ru')}
+                  variant={language === 'ru' ? 'default' : 'outline'}
+                  size="sm"
+                  className={language === 'ru' ? 'bg-yellow-500 text-black hover:bg-yellow-600' : 'hover:bg-yellow-500/20 border-yellow-500/50'}
+                >
+                  RU
+                </Button>
+                <Button
+                  onClick={() => setLanguage('en')}
+                  variant={language === 'en' ? 'default' : 'outline'}
+                  size="sm"
+                  className={language === 'en' ? 'bg-yellow-500 text-black hover:bg-yellow-600' : 'hover:bg-yellow-500/20 border-yellow-500/50'}
+                >
+                  EN
+                </Button>
+              </div>
               <div className="flex items-center gap-3 text-sm">
                 <Badge variant="outline" className="gap-2 py-1.5 px-3 border-yellow-500/50">
                   <span className="text-xs">💵 USD</span>
@@ -90,7 +110,7 @@ const Index = () => {
             <Icon name="Search" size={20} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" />
             <Input
               type="text"
-              placeholder="Поиск города..."
+              placeholder={t('search')}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="pl-12 h-14 text-lg bg-card/50 backdrop-blur border-2 border-yellow-500/50 focus:border-yellow-500 transition-all"
@@ -133,7 +153,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 text-lg">
             <Icon name="Users" size={20} className="text-yellow-500" />
-            <span className="text-muted-foreground">Посетителей:</span>
+            <span className="text-muted-foreground">{t('visitors')}</span>
             <span className="font-mono font-bold text-yellow-500 text-xl">{visitors.toLocaleString()}</span>
           </div>
         </div>

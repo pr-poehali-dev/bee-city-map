@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import type { City } from '@/data/cities';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface CityDetailsPageProps {
   city: City;
@@ -11,6 +12,7 @@ interface CityDetailsPageProps {
 
 export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted to-background">
@@ -21,7 +23,7 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
           className="mb-6 gap-2"
         >
           <Icon name="ArrowLeft" size={20} />
-          Назад к городам
+          {t('backToCities')}
         </Button>
 
         <div className="space-y-8">
@@ -35,14 +37,14 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
               className="gap-2 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold"
             >
               <Icon name="MapPin" size={20} />
-              Открыть на карте Google Maps
+              {t('openOnMap')}
             </Button>
           </div>
 
           <div className="space-y-6 animate-scale-in">
             <h2 className="text-3xl font-heading font-bold flex items-center gap-3">
               <Icon name="MapPin" size={32} className="text-primary" />
-              Достопримечательности
+              {t('attractions')}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {city.attractions.map((attr, idx) => (
@@ -70,17 +72,18 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
           <div className="space-y-6 animate-fade-in">
             <h2 className="text-3xl font-heading font-bold flex items-center gap-3">
               <Icon name="Newspaper" size={32} className="text-secondary" />
-              Последние новости
+              {t('news')}
             </h2>
             <div className="space-y-4">
               {city.news.map((item, idx) => (
                 <Card key={idx} className="p-6 hover:shadow-lg transition-all bg-card/50 backdrop-blur hover:bg-card/70 border-2 border-yellow-500/30 hover:border-yellow-500/60">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-full bg-yellow-500/20">
+                    <div className="p-3 rounded-full bg-yellow-500/20 flex-shrink-0">
                       <Icon name="Newspaper" size={24} className="text-yellow-500" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground mb-3 leading-relaxed">{item.description}</p>
                       <div className="flex items-center gap-4 text-sm text-muted-foreground">
                         <span className="flex items-center gap-1">
                           <Icon name="Calendar" size={16} />
