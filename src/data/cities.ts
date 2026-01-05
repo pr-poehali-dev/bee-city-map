@@ -1,22 +1,26 @@
 export interface City {
   id: string;
   name: string;
+  name_en?: string;
   region: string;
+  region_en?: string;
   population: string;
   image: string;
   temp: number;
   timezone: number;
   lat: number;
   lng: number;
-  attractions: Array<{ name: string; description: string; image: string }>;
-  news: Array<{ title: string; date: string; source: string; description: string }>;
+  attractions: Array<{ name: string; name_en?: string; description: string; description_en?: string; image: string }>;
+  news: Array<{ title: string; title_en?: string; date: string; source: string; description: string; description_en?: string }>;
 }
 
 export const cities: City[] = [
   {
     id: 'moscow',
     name: 'Москва',
+    name_en: 'Moscow',
     region: 'Москва',
+    region_en: 'Moscow',
     population: '13.1 млн',
     image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/e766ff8d-8618-431c-8fc7-13ca6056a821.jpg',
     temp: -5,
@@ -24,13 +28,13 @@ export const cities: City[] = [
     lat: 55.7558,
     lng: 37.6173,
     attractions: [
-      { name: 'Красная площадь', description: 'Главная площадь России и символ государственной власти, включенная в список Всемирного наследия ЮНЕСКО. Здесь расположены Кремль, Собор Василия Блаженного и Мавзолей Ленина. Площадь была свидетелем важнейших событий русской истории на протяжении веков.', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/8535b51c-de0c-4de7-8bdd-7d76ab396bb1.jpg' },
-      { name: 'ВДНХ', description: 'Выставка достижений народного хозяйства, основанная в 1939 году как витрина советских достижений. Комплекс занимает 325 гектаров и включает 49 объектов культурного наследия. Сегодня это один из крупнейших выставочных, музейных и рекреационных комплексов мира.', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/46fa2f7c-3387-4ab4-b1b8-95d47e1c17e8.jpg' },
-      { name: 'Третьяковская галерея', description: 'Крупнейший музей русского искусства в мире, основанный купцом Павлом Третьяковым в 1856 году. Коллекция насчитывает более 180 тысяч произведений, охватывающих период с XI века до наших дней. В музее представлены шедевры Рублева, Репина, Сурикова и других великих русских художников.', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/a01f585e-2763-4d8f-8394-801b970aa13c.jpg' }
+      { name: 'Красная площадь', name_en: 'Red Square', description: 'Главная площадь России и символ государственной власти, включенная в список Всемирного наследия ЮНЕСКО. Здесь расположены Кремль, Собор Василия Блаженного и Мавзолей Ленина. Площадь была свидетелем важнейших событий русской истории на протяжении веков.', description_en: 'The main square of Russia and a symbol of state power, included in the UNESCO World Heritage List. It houses the Kremlin, St. Basil\'s Cathedral, and Lenin\'s Mausoleum. The square has witnessed the most important events in Russian history throughout the centuries.', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/8535b51c-de0c-4de7-8bdd-7d76ab396bb1.jpg' },
+      { name: 'ВДНХ', name_en: 'VDNKh', description: 'Выставка достижений народного хозяйства, основанная в 1939 году как витрина советских достижений. Комплекс занимает 325 гектаров и включает 49 объектов культурного наследия. Сегодня это один из крупнейших выставочных, музейных и рекреационных комплексов мира.', description_en: 'Exhibition of Achievements of National Economy, founded in 1939 as a showcase of Soviet achievements. The complex occupies 325 hectares and includes 49 cultural heritage sites. Today it is one of the largest exhibition, museum and recreational complexes in the world.', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/46fa2f7c-3387-4ab4-b1b8-95d47e1c17e8.jpg' },
+      { name: 'Третьяковская галерея', name_en: 'Tretyakov Gallery', description: 'Крупнейший музей русского искусства в мире, основанный купцом Павлом Третьяковым в 1856 году. Коллекция насчитывает более 180 тысяч произведений, охватывающих период с XI века до наших дней. В музее представлены шедевры Рублева, Репина, Сурикова и других великих русских художников.', description_en: 'The largest museum of Russian art in the world, founded by merchant Pavel Tretyakov in 1856. The collection includes more than 180 thousand works spanning from the 11th century to the present day. The museum features masterpieces by Rublev, Repin, Surikov and other great Russian artists.', image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/a01f585e-2763-4d8f-8394-801b970aa13c.jpg' }
     ],
     news: [
-      { title: 'Открытие нового участка метро в Москве', date: '2 января 2026', source: 'РИА Новости', description: 'В столице открылся новый участок Большой кольцевой линии метро, соединивший районы Хорошево-Мневники и Кунцево. Протяженность нового участка составляет 4,5 километра с тремя новыми станциями. Это значительно сократит время в пути для 200 тысяч жителей западных районов Москвы.' },
-      { title: 'В столице прошел фестиваль "Путешествие в Рождество"', date: '1 января 2026', source: 'ТАСС', description: 'Крупнейший зимний фестиваль Москвы завершился, собрав более 15 миллионов посетителей за месяц работы. На 30 площадках города работали ярмарки, катки и развлекательные программы с участием артистов. Фестиваль стал важным событием для туристической индустрии столицы и создал праздничную атмосферу для жителей и гостей города.' }
+      { title: 'Открытие нового участка метро в Москве', title_en: 'Opening of new metro section in Moscow', date: '2 января 2026', source: 'РИА Новости', description: 'В столице открылся новый участок Большой кольцевой линии метро, соединивший районы Хорошево-Мневники и Кунцево. Протяженность нового участка составляет 4,5 километра с тремя новыми станциями. Это значительно сократит время в пути для 200 тысяч жителей западных районов Москвы.', description_en: 'A new section of the Big Circle Line opened in the capital, connecting the Khoroshevo-Mnevniki and Kuntsevo districts. The new section is 4.5 kilometers long with three new stations. This will significantly reduce travel time for 200 thousand residents of the western districts of Moscow.' },
+      { title: 'В столице прошел фестиваль "Путешествие в Рождество"', title_en: 'Journey to Christmas festival held in the capital', date: '1 января 2026', source: 'ТАСС', description: 'Крупнейший зимний фестиваль Москвы завершился, собрав более 15 миллионов посетителей за месяц работы. На 30 площадках города работали ярмарки, катки и развлекательные программы с участием артистов. Фестиваль стал важным событием для туристической индустрии столицы и создал праздничную атмосферу для жителей и гостей города.', description_en: 'Moscow\'s largest winter festival concluded, gathering more than 15 million visitors over a month of operation. Markets, ice rinks and entertainment programs with artists operated at 30 venues across the city. The festival became an important event for the capital\'s tourism industry and created a festive atmosphere for residents and guests of the city.' }
     ]
   },
   {

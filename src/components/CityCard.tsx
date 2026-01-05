@@ -39,8 +39,8 @@ export const CityCard = ({ city, currentTime, index, onOpenMap }: CityCardProps)
         </button>
         <div className="city-content">
           <div className="space-y-1">
-            <h3 className="font-heading font-bold text-2xl leading-tight">{language === 'en' ? city.name_en : city.name}</h3>
-            <p className="text-sm text-white/80">{language === 'en' ? city.region_en : city.region}</p>
+            <h3 className="font-heading font-bold text-2xl leading-tight">{language === 'en' ? (city.name_en || city.name) : city.name}</h3>
+            <p className="text-sm text-white/80">{language === 'en' ? (city.region_en || city.region) : city.region}</p>
           </div>
           <div className="space-y-2">
             <div className="flex items-center justify-between text-sm">
