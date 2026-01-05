@@ -37,8 +37,8 @@ const Index = () => {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: 'Города России',
-        text: 'Интерактивная карта городов России',
+        title: 'Отдых в России города миллионники',
+        text: 'Интерактивная карта городов-миллионников России',
         url: window.location.href
       });
     } else {
@@ -63,7 +63,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <h1 className="text-2xl md:text-3xl font-heading font-bold bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-600 bg-clip-text text-transparent animate-fade-in">
-              Города России
+              Отдых в России города миллионники
             </h1>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-3 text-sm">
