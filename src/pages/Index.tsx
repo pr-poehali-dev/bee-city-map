@@ -65,9 +65,14 @@ const Index = () => {
       <header className="border-b border-border/50 bg-card/30 backdrop-blur-xl sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <h1 className="text-2xl md:text-3xl font-heading font-bold bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-600 bg-clip-text text-transparent animate-fade-in">
-              {t('title')}
-            </h1>
+            <div>
+              <h1 className="text-2xl md:text-3xl font-heading font-bold bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-600 bg-clip-text text-transparent animate-fade-in">
+                {t('title')}
+              </h1>
+              <p className="text-sm md:text-base text-muted-foreground mt-1">
+                Holidays in Russia in the cities of millions
+              </p>
+            </div>
             <div className="flex items-center gap-4">
               <div className="flex gap-2">
                 <Button
