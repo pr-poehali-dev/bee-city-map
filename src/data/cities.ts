@@ -302,7 +302,7 @@ export const cities: City[] = [
     name: 'Волгоград',
     region: 'Волгоградская область',
     population: '1.0 млн',
-    image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/4d13413a-2237-46aa-b1f5-ee541975d3c0.jpg',
+    image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/1c1d4865-8ab3-4317-9139-beddea33929d.jpg',
     temp: -6,
     timezone: 3,
     lat: 48.7080,
