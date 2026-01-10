@@ -1,9 +1,17 @@
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import type { City } from '@/data/cities';
 import { useLanguage } from '@/contexts/LanguageContext';
+
+interface NewsItem {
+  title: string;
+  date: string;
+  source: string;
+  description: string;
+}
 
 interface CityDetailsPageProps {
   city: City;
@@ -13,6 +21,29 @@ interface CityDetailsPageProps {
 export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
   const navigate = useNavigate();
   const { t, language } = useLanguage();
+  const [news, setNews] = useState<NewsItem[]>(city.news);
+  const [isLoadingNews, setIsLoadingNews] = useState(false);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      setIsLoadingNews(true);
+      try {
+        const response = await fetch(`https://functions.poehali.dev/0826bf72-28a7-4db2-8d8f-d7e91b3107c8?city=${encodeURIComponent(city.name)}`);
+        const data = await response.json();
+        if (data.news && data.news.length > 0) {
+          setNews(data.news);
+        }
+      } catch (error) {
+        console.error('Failed to fetch news:', error);
+      } finally {
+        setIsLoadingNews(false);
+      }
+    };
+
+    fetchNews();
+    const interval = setInterval(fetchNews, 300000);
+    return () => clearInterval(interval);
+  }, [city.name]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted to-background">
@@ -75,15 +106,23 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
               {t('news')}
             </h2>
             <div className="space-y-4">
-              {city.news.map((item, idx) => (
+              {isLoadingNews && news.length === 0 ? (
+                <Card className="p-6 bg-card/50 backdrop-blur border-2 border-yellow-500/30">
+                  <div className="flex items-center gap-4">
+                    <Icon name="Loader2" size={24} className="animate-spin text-yellow-500" />
+                    <p className="text-muted-foreground">Загрузка актуальных новостей...</p>
+                  </div>
+                </Card>
+              ) : null}
+              {news.map((item, idx) => (
                 <Card key={idx} className="p-6 hover:shadow-lg transition-all bg-card/50 backdrop-blur hover:bg-card/70 border-2 border-yellow-500/30 hover:border-yellow-500/60">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-full bg-yellow-500/20 flex-shrink-0">
                       <Icon name="Newspaper" size={24} className="text-yellow-500" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold mb-2">{language === 'en' ? (item.title_en || item.title) : item.title}</h3>
-                      <p className="text-muted-foreground mb-3 leading-relaxed">{language === 'en' ? (item.description_en || item.description) : item.description}</p>
+                      <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground mb-3 leading-relaxed">{item.description}</p>
                       <div className="flex items-center gap-4 text-sm text-muted-foreground">
                         <span className="flex items-center gap-1">
                           <Icon name="Calendar" size={16} />

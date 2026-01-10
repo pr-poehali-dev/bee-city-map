@@ -1,0 +1,26 @@
+{
+  "tests": [
+    {
+      "name": "Get news without city parameter",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "news": "array",
+        "city": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get news for specific city",
+      "method": "GET",
+      "path": "/?city=Москва",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "news": "array",
+        "city": "Москва"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
