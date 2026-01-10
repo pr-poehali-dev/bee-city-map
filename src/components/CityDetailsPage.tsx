@@ -21,8 +21,8 @@ interface CityDetailsPageProps {
 export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
   const navigate = useNavigate();
   const { t, language } = useLanguage();
-  const [news, setNews] = useState<NewsItem[]>(city.news);
-  const [isLoadingNews, setIsLoadingNews] = useState(false);
+  const [news, setNews] = useState<NewsItem[]>([]);
+  const [isLoadingNews, setIsLoadingNews] = useState(true);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -32,9 +32,14 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
         const data = await response.json();
         if (data.news && data.news.length > 0) {
           setNews(data.news);
+        } else if (city.news && city.news.length > 0) {
+          setNews(city.news);
         }
       } catch (error) {
         console.error('Failed to fetch news:', error);
+        if (city.news && city.news.length > 0) {
+          setNews(city.news);
+        }
       } finally {
         setIsLoadingNews(false);
       }
@@ -43,7 +48,7 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
     fetchNews();
     const interval = setInterval(fetchNews, 300000);
     return () => clearInterval(interval);
-  }, [city.name]);
+  }, [city.name, city.news]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted to-background">
