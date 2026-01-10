@@ -117,7 +117,12 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
                     const response = await fetch(`https://functions.poehali.dev/0826bf72-28a7-4db2-8d8f-d7e91b3107c8?city=${encodeURIComponent(city.name)}`);
                     const data = await response.json();
                     if (data.news && data.news.length > 0) {
-                      setNews(data.news);
+                      const hasRealNews = data.news.some((item: NewsItem) => 
+                        !item.title.includes('Актуальные события в городе')
+                      );
+                      if (hasRealNews) {
+                        setNews(data.news);
+                      }
                     }
                   } catch (error) {
                     console.error('Failed to fetch news:', error);
