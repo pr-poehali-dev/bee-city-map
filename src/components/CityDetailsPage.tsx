@@ -21,27 +21,26 @@ interface CityDetailsPageProps {
 export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
   const navigate = useNavigate();
   const { t, language } = useLanguage();
-  const [news, setNews] = useState<NewsItem[]>([]);
-  const [isLoadingNews, setIsLoadingNews] = useState(true);
+  const [news, setNews] = useState<NewsItem[]>(city.news || []);
+  const [isLoadingNews, setIsLoadingNews] = useState(false);
 
   useEffect(() => {
+    setNews(city.news || []);
+    
     const fetchNews = async () => {
-      setIsLoadingNews(true);
       try {
         const response = await fetch(`https://functions.poehali.dev/0826bf72-28a7-4db2-8d8f-d7e91b3107c8?city=${encodeURIComponent(city.name)}`);
         const data = await response.json();
         if (data.news && data.news.length > 0) {
-          setNews(data.news);
-        } else if (city.news && city.news.length > 0) {
-          setNews(city.news);
+          const hasRealNews = data.news.some((item: NewsItem) => 
+            !item.title.includes('Актуальные события в городе')
+          );
+          if (hasRealNews) {
+            setNews(data.news);
+          }
         }
       } catch (error) {
         console.error('Failed to fetch news:', error);
-        if (city.news && city.news.length > 0) {
-          setNews(city.news);
-        }
-      } finally {
-        setIsLoadingNews(false);
       }
     };
 
