@@ -101,10 +101,34 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
           </div>
 
           <div className="space-y-6 animate-fade-in">
-            <h2 className="text-3xl font-heading font-bold flex items-center gap-3">
-              <Icon name="Newspaper" size={32} className="text-secondary" />
-              {t('news')}
-            </h2>
+            <div className="flex items-center justify-between">
+              <h2 className="text-3xl font-heading font-bold flex items-center gap-3">
+                <Icon name="Newspaper" size={32} className="text-secondary" />
+                {t('news')}
+              </h2>
+              <Button
+                onClick={async () => {
+                  setIsLoadingNews(true);
+                  try {
+                    const response = await fetch(`https://functions.poehali.dev/0826bf72-28a7-4db2-8d8f-d7e91b3107c8?city=${encodeURIComponent(city.name)}`);
+                    const data = await response.json();
+                    if (data.news && data.news.length > 0) {
+                      setNews(data.news);
+                    }
+                  } catch (error) {
+                    console.error('Failed to fetch news:', error);
+                  } finally {
+                    setIsLoadingNews(false);
+                  }
+                }}
+                variant="outline"
+                className="gap-2"
+                disabled={isLoadingNews}
+              >
+                <Icon name={isLoadingNews ? "Loader2" : "RefreshCw"} size={20} className={isLoadingNews ? "animate-spin" : ""} />
+                {isLoadingNews ? 'Обновление...' : 'Обновить'}
+              </Button>
+            </div>
             <div className="space-y-4">
               {isLoadingNews && news.length === 0 ? (
                 <Card className="p-6 bg-card/50 backdrop-blur border-2 border-yellow-500/30">
