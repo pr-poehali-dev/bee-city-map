@@ -22,7 +22,7 @@ export const cities: City[] = [
     region: 'Москва',
     region_en: 'Moscow',
     population: '13.1 млн',
-    image: 'https://cdn.poehali.dev/projects/d58285e7-31d6-4f9f-a889-49c5bb17c34f/files/e766ff8d-8618-431c-8fc7-13ca6056a821.jpg',
+    image: 'https://cdn.poehali.dev/files/_moskva.jpg',
     temp: -5,
     timezone: 3,
     lat: 55.7558,
