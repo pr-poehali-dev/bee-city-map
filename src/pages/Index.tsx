@@ -30,6 +30,25 @@ const Index = () => {
     localStorage.setItem('visitors', String(count + 1));
   }, []);
 
+  useEffect(() => {
+    const fetchCurrencyRates = async () => {
+      try {
+        const response = await fetch('https://functions.poehali.dev/c7b847dc-9f82-4a76-ba93-7e6514a83ddb');
+        const data = await response.json();
+        if (data.usd && data.eur) {
+          setUsdRate(data.usd);
+          setEurRate(data.eur);
+        }
+      } catch (error) {
+        console.error('Failed to fetch currency rates:', error);
+      }
+    };
+
+    fetchCurrencyRates();
+    const interval = setInterval(fetchCurrencyRates, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
   const filteredCities = cities.filter(city =>
     city.name.toLowerCase().includes(search.toLowerCase()) ||
     (city.name_en && city.name_en.toLowerCase().includes(search.toLowerCase()))

@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "name": "Get currency rates",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "usd": "number",
+        "eur": "number",
+        "updated": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
