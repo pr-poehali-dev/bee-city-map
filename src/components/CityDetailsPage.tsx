@@ -142,8 +142,15 @@ export const CityDetailsPage = ({ city, onOpenMap }: CityDetailsPageProps) => {
                     <p className="text-muted-foreground">Загрузка актуальных новостей...</p>
                   </div>
                 </Card>
+              ) : !isLoadingNews && news.length === 0 ? (
+                <Card className="p-6 bg-card/50 backdrop-blur border-2 border-yellow-500/30">
+                  <div className="flex items-center gap-4">
+                    <Icon name="Info" size={24} className="text-yellow-500" />
+                    <p className="text-muted-foreground">Новости для этого города пока не загружены. Попробуйте обновить.</p>
+                  </div>
+                </Card>
               ) : null}
-              {news.map((item, idx) => (
+              {news.length > 0 && news.map((item, idx) => (
                 <Card key={idx} className="p-6 hover:shadow-lg transition-all bg-card/50 backdrop-blur hover:bg-card/70 border-2 border-yellow-500/30 hover:border-yellow-500/60">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-full bg-yellow-500/20 flex-shrink-0">
